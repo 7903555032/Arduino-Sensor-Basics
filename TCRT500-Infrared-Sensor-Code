@@ -1,0 +1,20 @@
+#define IR_SENSOR 2  // OUT pin connected to D2
+
+void setup() {
+    Serial.begin(9600);
+    pinMode(IR_SENSOR, INPUT);
+    Serial.println("TCRT5000 IR Sensor Test...");
+}
+
+void loop() {
+    int state = digitalRead(IR_SENSOR);
+    
+    if (state == LOW) {
+        Serial.println("⚠️ Object Detected!");
+    } else {
+        Serial.println("✅ No Object Detected");
+    }
+    
+    delay(500);
+}
+
