@@ -1,0 +1,15 @@
+#define SOIL_SENSOR 2  // Sensor D0 → Arduino D2
+
+void setup() {
+    Serial.begin(9600);
+    pinMode(SOIL_SENSOR, INPUT);
+}
+
+void loop() {
+    if (digitalRead(SOIL_SENSOR) == LOW) {
+        Serial.println("💧 Soil is Wet!");
+    } else {
+        Serial.println("🌵 Soil is Dry! Water Needed!");
+    }
+    delay(1000);
+}
