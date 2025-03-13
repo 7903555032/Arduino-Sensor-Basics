@@ -4,7 +4,7 @@ A collection of basic Arduino sensor modules with Serial.begin test codes.
 ## List of Sensors  
 - Rain Detect Sensor
 - Vibration Sensor 
-- Temperature Sensor  
+- Temperature and Humidity Sensor  
 - Ultrasonic Sensor  
 - Gas Sensor  
 - and more...  
