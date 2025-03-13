@@ -1,0 +1,29 @@
+#define RAIN_SENSOR A0
+void setup() {
+    Serial.begin(9600); // Start Serial Monitor
+    pinMode(RAIN_SENSOR, INPUT); // Define sensor as input
+}
+
+void loop() {
+    int rainValue = analogRead(RAIN_SENSOR); // Read analog value
+    Serial.print("Rain Sensor Value: ");
+    Serial.println(rainValue); // Print value to Serial Monitor
+
+    // Check rain intensity
+    if (rainValue < 300) {
+        Serial.println("⚠️ Heavy Rain Detected!");
+    } else if (rainValue < 700) {
+        Serial.println("🌧️ Light Rain Detected");
+    } else {
+        Serial.println("☀️ No Rain");
+    }
+    
+    delay(1000); // Delay for readability
+}
+
+
+//Connect
+//VCC - 5V
+//GND - GND
+//D0 - D7
+//A0 - A0
