@@ -1,0 +1,15 @@
+#define VIBRATION_SENSOR 2  // SW-420 D0 → D2
+
+void setup() {
+    Serial.begin(9600);
+    pinMode(VIBRATION_SENSOR, INPUT);
+}
+
+void loop() {
+    if (digitalRead(VIBRATION_SENSOR) == LOW) {  // LOW means vibration detected
+        Serial.println("⚠️ Vibration Detected!");
+    } else {
+        Serial.println("✅ No Vibration");
+    }
+    delay(500);
+}
