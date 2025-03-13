@@ -13,6 +13,7 @@ A collection of basic Arduino sensor modules with Serial.begin test codes.
 - Transmitter and Receiver
 - IR Obstacle Detector
 - KY-03 Sound Sensor
+- SW-420 Vibration Sensor
 - Gas Sensor  
 - and more...  
 
