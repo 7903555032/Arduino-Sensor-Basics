@@ -1,0 +1,31 @@
+#define IR_SENSOR 2  // OUT pin connected to D2
+
+void setup() {
+    Serial.begin(9600);
+    pinMode(IR_SENSOR, INPUT);
+    Serial.println("IR Sensor Module Debugging...");
+}
+
+void loop() {
+    int sensorValue = digitalRead(IR_SENSOR);
+    
+    Serial.print("Sensor Output: ");
+    Serial.println(sensorValue);  // Prints actual HIGH (1) or LOW (0)
+
+    if (sensorValue == LOW) {
+        Serial.println("⚠️ Object Detected!");
+    } else {
+        Serial.println("✅ No Object Detected");
+    }
+
+    delay(500);
+}
+
+// EXPECTED OUTPUT
+/*
+Sensor Output: 1
+✅ No Object Detected
+Sensor Output: 0
+⚠️ Object Detected!
+
+*/
