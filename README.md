@@ -6,7 +6,8 @@ A collection of basic Arduino sensor modules with Serial.begin test codes.
 - Vibration Sensor 
 - Temperature and Humidity Sensor \
 - LDR Sensor
-- PIR Motion Sensor 
+- PIR Motion Sensor
+- TCRT500 Infrared Sensor
 - Ultrasonic Sensor  
 - Gas Sensor  
 - and more...  
