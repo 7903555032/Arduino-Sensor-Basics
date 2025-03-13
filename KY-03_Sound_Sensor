@@ -1,15 +1,13 @@
-#define SOUND_SENSOR 2  // KY-038 D0 → D2
+#define SOUND_SENSOR A0  // KY-038 A0 → A0
 
 void setup() {
     Serial.begin(9600);
-    pinMode(SOUND_SENSOR, INPUT);
 }
 
 void loop() {
-    if (digitalRead(SOUND_SENSOR) == HIGH) {
-        Serial.println("🔊 Loud Sound Detected!");
-    } else {
-        Serial.println("🔇 No Sound");
-    }
+    int soundLevel = analogRead(SOUND_SENSOR);
+    Serial.print("🔊 Sound Level: ");
+    Serial.println(soundLevel);
     delay(500);
 }
+
