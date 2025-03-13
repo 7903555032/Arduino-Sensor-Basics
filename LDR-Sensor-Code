@@ -1,0 +1,34 @@
+const int lightSensor = 2;  // Connect DO (Digital Output) to D2
+
+void setup() {
+    Serial.begin(9600);  // Start Serial Communication
+    pinMode(lightSensor, INPUT);  // Set sensor as input
+    Serial.println("LM393 Light Intensity Sensor Test...");
+}
+
+void loop() {
+    int lightState = digitalRead(lightSensor);  // Read digital output
+
+    if (lightState == HIGH) {
+        Serial.println("Bright Light Detected! 🌞");
+    } else {
+        Serial.println("Low Light or Darkness! 🌙");
+    }
+
+    delay(500);  // Small delay before next reading
+}
+
+/*
+Sensor Pin	Arduino Pin	Description
+VCC	   5V  	Power supply
+GND  	GND	  Ground
+DO   	D2	  High/Low based on sensor input
+*/
+
+/*
+LM393 Light Intensity Sensor Test...
+Bright Light Detected! 🌞
+Bright Light Detected! 🌞
+Low Light or Darkness! 🌙
+Low Light or Darkness! 🌙
+*/
