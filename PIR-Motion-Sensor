@@ -1,0 +1,36 @@
+#define PIR_PIN 2  // Connect PIR sensor to digital pin 2
+
+void setup() {
+    Serial.begin(9600);
+    pinMode(PIR_PIN, INPUT);
+    Serial.println("PIR Motion Sensor Test...");
+}
+
+void loop() {
+    int motion = digitalRead(PIR_PIN);
+    
+    if (motion == HIGH) {
+        Serial.println("🚶‍♂️ Motion Detected!");
+    } else {
+        Serial.println("No Motion...");
+    }
+    
+    delay(1000);  // Check every second
+}
+
+/*
+PIR  	  Arduino-Pin	    Description
+VCC   	5V	            Power supply (3.3V–5V)
+GND    	GND	            Ground
+OUT    	D2	            Digital Output (HIGH when motion detected)
+*/
+
+//EXPECTED SERIAL MONITOR OUTPUT
+/*
+PIR Motion Sensor Test...
+No Motion...
+No Motion...
+🚶‍♂️ Motion Detected!
+No Motion...
+🚶‍♂️ Motion Detected!
+*/
