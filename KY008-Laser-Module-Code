@@ -1,0 +1,33 @@
+const int laserPin = 3;  // Laser module signal pin connected to D3
+
+void setup() {
+    Serial.begin(9600);  // Start Serial Communication
+    pinMode(laserPin, OUTPUT);  // Set laser pin as output
+    Serial.println("KY-008 Laser Module Test...");
+}
+
+void loop() {
+    Serial.println("Laser ON 🔴");
+    digitalWrite(laserPin, HIGH);  // Turn laser ON
+    delay(1000);  // Keep it ON for 1 second
+
+    Serial.println("Laser OFF ⚫");
+    digitalWrite(laserPin, LOW);  // Turn laser OFF
+    delay(1000);  // Keep it OFF for 1 second
+}
+
+/*
+KY-008   Arduino	    Arduino Pin	Description
+VCC	     5V         	Power supply
+GND	    GND          	Ground
+S     	D3	          Digital control pin
+*/
+
+/*
+KY-008 Laser Module Test...
+Laser ON 🔴
+Laser OFF ⚫
+Laser ON 🔴
+Laser OFF ⚫
+...
+*/
