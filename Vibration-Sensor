@@ -18,8 +18,8 @@ void loop() {
     delay(500);  // Delay to reduce serial monitor spam
 }
 
-*/ Connect 
+/* Connect 
    vcc - 5V
     GND - GND
     D0 - D2
-/*
+*/
