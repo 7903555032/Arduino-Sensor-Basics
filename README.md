@@ -11,6 +11,7 @@ A collection of basic Arduino sensor modules with Serial.begin test codes.
 - IR Sensor
 - Ultrasonic Sensor
 - Transmitter and Receiver
+- IR Obstacle Detector
 - Gas Sensor  
 - and more...  
 
